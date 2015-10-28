@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+                <meta name="format-detection" content="telephone=no">
+                <meta name="msapplication-tap-highlight" content="no">-->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">        <!--<link rel="stylesheet" type="text/css" href="css/index.css">-->
+        <link rel="stylesheet" type="text/css" href="css/lib/jquery.mobile-1.4.5.min.css"> 
+        <link rel="stylesheet" type="text/css" href="css/responsive_grid.css"> 
+        <script type="text/javascript" src="js/lib/jquery-1.11.3.min.js"></script>
+        <script type="text/javascript" src="js/lib/jquery.mobile-1.4.5.min.js"></script>
+        <script type="text/javascript" src="js/myJs.js"></script>
+        <title>Booking Movie Ticket</title>
+        <script type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <!--Home Page-->
+        <div class="my-page" id="home-page" data-role="page" data-theme="a" data-url="home-page">
+            <div data-role="header">
+                <h1>Movie List</h1>
+                <a href="./" data-ajax="false" data-icon="arrow-l" data-iconpos="notext" data-rel="arrow-l" data-iconshadow="false" data-shadow="false">Back</a>
+            </div><!-- /header -->
+            <div class="ui-content" role="main">
+                <form class="ui-filterable">
+                    <input id="rich-autocomplete-input" placeholder="Search Movie..." data-type="search">
+                </form>
+                <ul data-role="listview" data-inset="true" data-input="#rich-autocomplete-input" data-filter="true">
+                    <li><a href="#page-1" class="ui-btn ui-shadow ui-corner-all ui-icon-arrow-r ui-btn-icon-right">
+                            <img class="ui-li-thumb" src="img/thanksyou.jpg">
+                            <h2>I Fine Thank You Love You</h2>
+                            <p>Yim goes to English school to keep his Japanese girlfriend in this Thai romantic comedy.</p>
+                            <p class="ui-li-aside">Thai</p>
+                        </a>
+                    </li>
+                    <li><a href="#page-1" class="ui-btn ui-shadow ui-corner-all ui-icon-arrow-r ui-btn-icon-right">
+                            <img class="ui-li-thumb" src="img/twenty.jpg">
+                            <h2>Twenty</h2>
+                            <p>A story about three friends, Chiho, Dongwoo, and Gyungjae.</p>
+                            <p class="ui-li-aside">Korean</p>
+                        </a>
+                    </li>
+                    <li><a href="#page-1" class="ui-btn ui-shadow ui-corner-all ui-icon-arrow-r ui-btn-icon-right">
+                            <img class="ui-li-thumb" src="img/fantastic4.jpg">
+                            <h2>Fantastic Four</h2>
+                            <p>Four young outsiders teleport to an alternate and dangerous universe.</p>
+                            <p class="ui-li-aside">Hollywood</p>
+                        </a>
+                    </li>
+                    <li><a href="#page-1" class="ui-btn ui-shadow ui-corner-all ui-icon-arrow-r ui-btn-icon-right">
+                            <img class="ui-li-thumb" src="img/inside_out.jpg">
+                            <h2>Inside Out</h2>
+                            <p>After young Riley is uprooted from her Midwest life and moved to San Francisco, her emotions</p>
+                            <p class="ui-li-aside">Cartoon</p>
+                        </a>
+                    </li>
+                    <li><a href="#page-1" class="ui-btn ui-shadow ui-corner-all ui-icon-arrow-r ui-btn-icon-right">
+                            <img class="ui-li-thumb" src="img/Poltergeist.jpg">
+                            <h2>Poltergeist</h2>
+                            <p>A family whose suburban home is haunted by evil forces must come together to rescue their youngest daughter</p>
+                            <p class="ui-li-aside">Horror</p>
+                        </a>
+                    </li>
+                    <li><a href="#page-1" class="ui-btn ui-shadow ui-corner-all ui-icon-arrow-r ui-btn-icon-right">
+                            <img class="ui-li-thumb" src="img/2by2.jpg">
+                            <h2>Two by Two</h2>
+                            <p>It's the end of the world. A flood is coming.</p>
+                            <p class="ui-li-aside">Cartoon</p>  
+                        </a>
+                    </li>
+                    <li><a href="#page-1" class="ui-btn ui-shadow ui-corner-all ui-icon-arrow-r ui-btn-icon-right">
+                            <img class="ui-li-thumb" src="img/from_vegas.jpg">
+                            <h2>From Vegas to Macau 2</h2>
+                            <p> Following Ken's confrontation with the nefarious DOA organization</p>
+                            <p class="ui-li-aside">Chinese</p>
+                        </a>
+                    </li>
+                    <li><a href="#page-1" class="ui-btn ui-shadow ui-corner-all ui-icon-arrow-r ui-btn-icon-right">
+                            <img class="ui-li-thumb" src="img/ms_granny.jpg">
+                            <h2>20 Once Again/Miss Granny</h2>
+                            <p>A 70-year old woman living unhappily with her son's family is magically.</p>
+                            <p class="ui-li-aside">Chinese</p>
+                        </a>
+                    </li>
+                    <li><a href="#page-1" class="ui-btn ui-shadow ui-corner-all ui-icon-arrow-r ui-btn-icon-right">
+                            <img class="ui-li-thumb" src="img/wreck.jpg">
+                            <h2>Wreck It Ralph</h2>
+                            <p>A video game villain wants to be a hero and sets out to fulfill his dream.</p>
+                            <p class="ui-li-aside">Cartoon</p>
+                        </a>
+                    </li>
+                    <li><a href="#page-1" class="ui-btn ui-shadow ui-corner-all ui-icon-arrow-r ui-btn-icon-right">
+                            <img class="ui-li-thumb" src="img/hobbit.jpg">
+                            <h2>The Hobbit The Battle of the Five Armies</h2>
+                            <p>Bilbo and Company are forced to engage in a war against an array of combatants.</p>
+                            <p class="ui-li-aside">Hollywood</p>
+                        </a>
+                    </li>
+                    <li><a href="#page-1" class="ui-btn ui-shadow ui-corner-all ui-icon-arrow-r ui-btn-icon-right">
+                            <img class="ui-li-thumb" src="img/nemo.jpg">
+                            <h2>Finding Nemo</h2>
+                            <p>After his son is captured in the Great Barrier Reef and taken to Sydney</p>
+                            <p class="ui-li-aside">Cartoon</p>
+                        </a>
+                    </li>
+                    <li><a href="#page-1" class="ui-btn ui-shadow ui-corner-all ui-icon-arrow-r ui-btn-icon-right">
+                            <img class="ui-li-thumb" src="img/ladda.jpg">
+                            <h2>Ladda Land/Laddaland</h2>
+                            <p>When a family moves to Laddaland, an upscale housing development with large, beautiful homes.</p>
+                            <p class="ui-li-aside">Thai</p>
+                        </a>
+                    </li>                    
+                </ul>
+            </div><!-- /content -->
+        </div>   
+        <!--End Home page-->
+
+        <!--I Fine-->
+        <div data-role="page" data-theme="a" id="page-1">
+            <div data-role="header">
+                <h1>I Fine Thanks You Love You</h1>
+                <a href="./" data-ajax="false" data-icon="arrow-l" data-iconpos="notext" data-rel="arrow-l" data-iconshadow="false" data-shadow="false">Back</a>
+            </div>
+            <div data-role="content"> 
+                <div style="text-align: center"><img src="img/thanksyou.jpg" width="50%"/></div>
+                <div data-role="collapsible" data-content-theme="a" data-theme="a">
+                    <h4>Movie Detail</h4>
+                    <table class="ui-responsive" id="movie-table-custom" data-role="table" data-mode="reflow">
+                        <thead>
+                            <tr>
+                                <th style="width: 30%;">Title</th>
+                                <th data-priority="1">Country</th>
+                                <th data-priority="2">Genre</th>
+                                <th data-priority="3">Duration</th>
+                                <th data-priority="4">Year</th>
+                                <th data-priority="4">Language</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>I Fine Thank You Love You</td>
+                                <td>Thailand</td>
+                                <td>Comedy, Romance</td>
+                                <td>01:55:00</td>
+                                <td>2015</td>
+                                <td>TH</td>
+                            </tr>                            
+                        </tbody>
+                    </table>
+
+                </div>
+                <div data-role="collapsible" data-content-theme="a" data-theme="a">
+                    <h4>Booking Ticket Now</h4>
+                    <form>
+                        <input name="txt_date" id="txt_date" type="date" data-mini="true" data-theme="a">
+                        <select name="cmb_time" id="cmb_time" data-native-menu="false" data-mini="true">
+                            <option>Please select Time:</option>
+                        </select>
+                        <select name="cmb_cinema" id="cmb_cinema" data-native-menu="false" data-mini="true">
+                            <option>Please select Cinema:</option>
+                        </select>
+                        <div id="seatPrice" style="display: none">
+                            <input style="" name="txt_num_of_seat" id="txt_num_of_seat" type="number" pattern="[0-9]*" value="" placeholder="Number of Seat" data-mini="true">
+                            <input style="" name="txt_price" id="txt_price" type="number" pattern="[0-9]*" value="" placeholder="Price...($4)" data-mini="true">
+                        </div>
+                        <div id="custInfo" style="display:none">
+                            <input style="" name="txt_name" id="txt_name" type="text" value="" placeholder="Your Name..." data-mini="true">
+                            <input style="" name="txt_tel" id="txt_tel" type="tel" value="" placeholder="Telephone..." data-mini="true">
+                        </div>                        
+                        <a id="btn_book" class="ui-btn ui-corner-all ui-mini ui-btn-b" data-close-btn="right" href="#dlg-1" data-rel="popup" data-position-to="window" data-transition="pop">Book Now</a>
+                    </form>
+                </div>
+            </div>            
+            <div id="dlg-1" style="max-width: 400px" data-role="popup" data-theme="a" data-overlay-theme="a" data-dismissible="true">
+                <div data-role="header" data-theme="a">
+                    <h1>Booking Info</h1>
+                </div>
+                <div class="ui-content" role="main">                        
+                    <div id="dlg-1-content"></div>                        
+                </div>
+            </div>
+        </div> 
+        <!--End I Fine -->
+
+    </body>
+</html>
