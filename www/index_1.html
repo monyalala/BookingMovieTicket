@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <!--        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+                <meta name="format-detection" content="telephone=no">
+                <meta name="msapplication-tap-highlight" content="no">-->
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">        <!--<link rel="stylesheet" type="text/css" href="css/index.css">-->
         <link rel="stylesheet" type="text/css" href="css/libs/jquery.mobile-1.4.5.min.css"> 
-        <!--<link rel="stylesheet" type="text/css" href="css/responsive_grid.css">--> 
+        <link rel="stylesheet" type="text/css" href="css/responsive_grid.css"> 
         <script type="text/javascript" src="js/libs/jquery-1.11.3.min.js"></script>
         <script type="text/javascript" src="js/libs/jquery.mobile-1.4.5.min.js"></script>
-        <script type="text/javascript" src="js/myJs.js"></script>        
+        <script type="text/javascript" src="js/myJs.js"></script>
+        <script type="text/javascript" src="js/model/movie_model.js"></script>
         <title>Booking Movie Ticket</title>
         <script type="text/javascript">
         </script>
@@ -17,20 +21,105 @@
             <div data-role="header">
                 <h1>Movie List</h1>
                 <a href="./" data-ajax="false" data-icon="arrow-l" data-iconpos="notext" data-rel="arrow-l" data-iconshadow="false" data-shadow="false">Back</a>
-            </div>
+            </div><!-- /header -->
             <div class="ui-content" role="main">
                 <form class="ui-filterable">
-                    <input id="search" placeholder="Search Movie..." data-type="search">
+                    <input id="rich-autocomplete-input" placeholder="Search Movie..." data-type="search">
                 </form>
-                <ul id="list-movies" data-role="listview" data-inset="true" data-input="#search" data-filter="true"></ul>
-            </div>
+                <ul data-role="listview" data-inset="true" data-input="#rich-autocomplete-input" data-filter="true">
+<!--                    <li><a href="#page-1" class="ui-btn ui-shadow ui-corner-all ui-icon-arrow-r ui-btn-icon-right">
+                            <img class="ui-li-thumb" src="img/thanksyou.jpg">
+                            <h2>I Fine Thank You Love You</h2>
+                            <p>Yim goes to English school to keep his Japanese girlfriend in this Thai romantic comedy.</p>
+                            <p class="ui-li-aside">Thai</p>
+                        </a>
+                    </li>
+                    <li><a href="#page-1" class="ui-btn ui-shadow ui-corner-all ui-icon-arrow-r ui-btn-icon-right">
+                            <img class="ui-li-thumb" src="img/twenty.jpg">
+                            <h2>Twenty</h2>
+                            <p>A story about three friends, Chiho, Dongwoo, and Gyungjae.</p>
+                            <p class="ui-li-aside">Korean</p>
+                        </a>
+                    </li>
+                    <li><a href="#page-1" class="ui-btn ui-shadow ui-corner-all ui-icon-arrow-r ui-btn-icon-right">
+                            <img class="ui-li-thumb" src="img/fantastic4.jpg">
+                            <h2>Fantastic Four</h2>
+                            <p>Four young outsiders teleport to an alternate and dangerous universe.</p>
+                            <p class="ui-li-aside">Hollywood</p>
+                        </a>
+                    </li>
+                    <li><a href="#page-1" class="ui-btn ui-shadow ui-corner-all ui-icon-arrow-r ui-btn-icon-right">
+                            <img class="ui-li-thumb" src="img/inside_out.jpg">
+                            <h2>Inside Out</h2>
+                            <p>After young Riley is uprooted from her Midwest life and moved to San Francisco, her emotions</p>
+                            <p class="ui-li-aside">Cartoon</p>
+                        </a>
+                    </li>
+                    <li><a href="#page-1" class="ui-btn ui-shadow ui-corner-all ui-icon-arrow-r ui-btn-icon-right">
+                            <img class="ui-li-thumb" src="img/Poltergeist.jpg">
+                            <h2>Poltergeist</h2>
+                            <p>A family whose suburban home is haunted by evil forces must come together to rescue their youngest daughter</p>
+                            <p class="ui-li-aside">Horror</p>
+                        </a>
+                    </li>
+                    <li><a href="#page-1" class="ui-btn ui-shadow ui-corner-all ui-icon-arrow-r ui-btn-icon-right">
+                            <img class="ui-li-thumb" src="img/2by2.jpg">
+                            <h2>Two by Two</h2>
+                            <p>It's the end of the world. A flood is coming.</p>
+                            <p class="ui-li-aside">Cartoon</p>  
+                        </a>
+                    </li>
+                    <li><a href="#page-1" class="ui-btn ui-shadow ui-corner-all ui-icon-arrow-r ui-btn-icon-right">
+                            <img class="ui-li-thumb" src="img/from_vegas.jpg">
+                            <h2>From Vegas to Macau 2</h2>
+                            <p> Following Ken's confrontation with the nefarious DOA organization</p>
+                            <p class="ui-li-aside">Chinese</p>
+                        </a>
+                    </li>
+                    <li><a href="#page-1" class="ui-btn ui-shadow ui-corner-all ui-icon-arrow-r ui-btn-icon-right">
+                            <img class="ui-li-thumb" src="img/ms_granny.jpg">
+                            <h2>20 Once Again/Miss Granny</h2>
+                            <p>A 70-year old woman living unhappily with her son's family is magically.</p>
+                            <p class="ui-li-aside">Chinese</p>
+                        </a>
+                    </li>
+                    <li><a href="#page-1" class="ui-btn ui-shadow ui-corner-all ui-icon-arrow-r ui-btn-icon-right">
+                            <img class="ui-li-thumb" src="img/wreck.jpg">
+                            <h2>Wreck It Ralph</h2>
+                            <p>A video game villain wants to be a hero and sets out to fulfill his dream.</p>
+                            <p class="ui-li-aside">Cartoon</p>
+                        </a>
+                    </li>
+                    <li><a href="#page-1" class="ui-btn ui-shadow ui-corner-all ui-icon-arrow-r ui-btn-icon-right">
+                            <img class="ui-li-thumb" src="img/hobbit.jpg">
+                            <h2>The Hobbit The Battle of the Five Armies</h2>
+                            <p>Bilbo and Company are forced to engage in a war against an array of combatants.</p>
+                            <p class="ui-li-aside">Hollywood</p>
+                        </a>
+                    </li>
+                    <li><a href="#page-1" class="ui-btn ui-shadow ui-corner-all ui-icon-arrow-r ui-btn-icon-right">
+                            <img class="ui-li-thumb" src="img/nemo.jpg">
+                            <h2>Finding Nemo</h2>
+                            <p>After his son is captured in the Great Barrier Reef and taken to Sydney</p>
+                            <p class="ui-li-aside">Cartoon</p>
+                        </a>
+                    </li>
+                    <li><a href="#page-1" class="ui-btn ui-shadow ui-corner-all ui-icon-arrow-r ui-btn-icon-right">
+                            <img class="ui-li-thumb" src="img/ladda.jpg">
+                            <h2>Ladda Land/Laddaland</h2>
+                            <p>When a family moves to Laddaland, an upscale housing development with large, beautiful homes.</p>
+                            <p class="ui-li-aside">Thai</p>
+                        </a>
+                    </li>                    -->
+                </ul>
+            </div><!-- /content -->
         </div>   
         <!--End Home page-->
 
-        <!--Movie Detail-->
-        <div data-role="page" data-theme="a" id="page-movie-detail">
+        <!--I Fine-->
+        <div data-role="page" data-theme="a" id="page-1">
             <div data-role="header">
-                <h1 id="movie-name"></h1>
+                <h1>I Fine Thanks You Love You</h1>
                 <a href="./" data-ajax="false" data-icon="arrow-l" data-iconpos="notext" data-rel="arrow-l" data-iconshadow="false" data-shadow="false">Back</a>
             </div>
             <div data-role="content"> 
@@ -96,16 +185,7 @@
                 </div>
             </div>
         </div> 
-        <!--End Movie Detail -->
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-        <script type="text/javascript" src="js/model/movie_model.js"></script>
-        <script type="text/javascript" src="js/view/movie_view.js"></script>
-        <script type="text/javascript" src="js/controller/movie_controller.js"></script>
-        <script>
-            app.onDeviceReady();
-        </script>
-        
+        <!--End I Fine -->
         
     </body>
 </html>
