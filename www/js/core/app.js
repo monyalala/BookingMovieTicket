@@ -1,4 +1,4 @@
-var app = {
+var App = {
     // Application Constructor
     initialize: function() {
         this.bindEvents();
@@ -7,9 +7,10 @@ var app = {
         document.addEventListener('deviceready', this.onDeviceReady, false);
     },
     onDeviceReady: function() {
-        MovieModel.setMovies();
-        MovieController.get();
+        MovieModel.set();
+        MovieController.get();        
+        MovieTicketModel.set();
     }
 };
 
-app.initialize();
+App.initialize();
